@@ -3,6 +3,99 @@
 \textbf{Put your paper here.}
 \vskip 0.4in
 
-
-
 This is the Rubin Observatory overview paper: \citet{2019ApJ...873..111I}.
+
+\begin{itemize}
+    \item Explain Astrometry.
+    \item Requirment for Rubin.
+    \item Important for Lensing, solar system physics.
+    \item DES observed E-mode and static component.
+    \item Similar result were observed in HSC.
+    \item Early result of LSSTComCam are showing this to. 
+    \item Goal here is to characterize for Rubin to see how perform the global astrometric solution.
+    \item See how Turbulence is behaving on Rubin with shorter exposure time and see any static effect.
+    \item Use data from DP2 to assess this from LSSTCam took in the first few month of the camera beeing on sky.
+\end{itemize}
+
+
+\section{Astrometric solution and residuals from LSSTCam}
+
+\subsection{Astrometric solution from LSSTCam}
+
+\begin{itemize}
+    \item Rubin software is used to process the image.
+    \item Astrometry is compute using a modified version of DES Astrometry.
+    \item Solution is compute using all visit from a given tract.
+    \item Match between detected source and Gaia.
+    \item A polynomial for fov and a polynomial per detector.
+    \item fit proper motion.
+    \item Residuals are compute to be the diff between mean object position and position in current visit.
+    \item We look at residual in Focal plane coordinate system.
+    \item x and y are position into focal plane and dx and dy astrometric residuals.
+\end{itemize}
+
+\subsection{Characterization of Astrometric residuals of LSSTCam}
+
+\begin{itemize}
+    \item Show residuals in some visit at different time. 
+    \item Show E/B mode distribution.
+    \item Show that some visit exibit B-mode.
+    \item Compare with PSF ?
+    \item E mode vs time ?
+    \item Discuss that way stronger than DES, and HSC. Make a comment compared to DP1.
+\end{itemize}
+
+\section{Gaussian Process modeling of Astrometric residuals at single visit level}
+
+
+\subsection{The GP model}
+
+\begin{itemize}
+    \item This is exactly the same thing as in HSC
+    \item Just remind quickly
+    \item Explain what is different with DES again
+    \item Say O(n * log(n))
+\end{itemize}
+
+\subsection{Practical implementation for Rubin}
+
+\begin{itemize}
+    \item Randomly select 10k source.
+    \item Interpolate CCD per CCD using the full focal plane kernel.
+    \item Does not look to affect performance.
+\end{itemize}
+
+\subsection{Results}
+
+\begin{itemize}
+    \item Show some visit result.
+    \item Explain that with dense field looks GP, still some remaining stuff. 
+    \item Final correlation.
+    \item Make same plot than DES to have side to side comparaison? 
+\end{itemize}
+
+\section{Static astrometric distortion}
+
+
+\subsection{Full Focal plane vue}
+
+\begin{itemize}
+    \item Show full FoV distorsion
+    \item Show some CCD with some filtering
+    \item Show what happened when closing the loop
+\end{itemize}
+
+\subsection{On ITL distortion}
+
+\begin{itemize}
+    \item Average plot and comment it looks like SLAC measurement. 
+\end{itemize}
+
+\subsection{On E2V distorsion}
+
+\begin{itemize}
+    \item Average plot and comment not fully understood as I am writting those line but looks like the SLAC measurment to. 
+\end{itemize}
+
+
+
